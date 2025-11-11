@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local RAG</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Local RAG</h1>
+
+    <section class="card">
+      <h2>1) Ingest content</h2>
+      <form id="upload-form">
+        <label>Text</label>
+        <textarea id="text" name="text" placeholder="Paste text here..." rows="6"></textarea>
+
+        <div class="or">or</div>
+
+        <label>.txt file</label>
+        <input id="file" name="file" type="file" accept=".txt" />
+
+        <button type="submit">Save to vector database</button>
+        <span id="upload-status" class="status"></span>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>2) Ask the model</h2>
+      <div class="ask">
+        <input id="question" type="text" placeholder="Type your question..." />
+        <button id="askBtn">Ask</button>
+      </div>
+      <div id="answer" class="answer" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
