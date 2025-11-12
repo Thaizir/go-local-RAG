@@ -31,7 +31,7 @@ func NewQueryHandler(
 			return
 		}
 
-		topK := 50
+		topK := 100
 
 		docs, err := searchFn(r.Context(), question, topK)
 		if err != nil {
